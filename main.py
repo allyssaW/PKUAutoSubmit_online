@@ -48,11 +48,17 @@ if __name__ == '__main__':
     parser.add_argument('--SENDKEY', type=str)
     argconf = parser.parse_args()
 
+    #chrome_options = Options()
+    #chrome_options.add_argument("--headless")
+    #driver_pjs = webdriver.Edge(
+    #        options=chrome_options,
+    #        executable_path=sys_path(browser="chromedriver"),
+    #        service_args=['--ignore-ssl-errors=true', '--ssl-protocol=TLSv1'])
     chrome_options = Options()
     chrome_options.add_argument("--headless")
-    driver_pjs = webdriver.Edge(
+    driver_pjs = webdriver.Chrome(
+            executable_path=ChromeDriverManager().install(),
             options=chrome_options,
-            executable_path=sys_path(browser="chromedriver"),
             service_args=['--ignore-ssl-errors=true', '--ssl-protocol=TLSv1'])
     print('Driver Launched\n')
 
