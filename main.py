@@ -1,4 +1,5 @@
 # -*- coding: utf-8
+pip3 install webdriver_manager
 import env_check
 from configparser import ConfigParser
 from selenium.webdriver.chrome.options import Options
