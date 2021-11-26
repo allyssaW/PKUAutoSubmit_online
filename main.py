@@ -4,6 +4,7 @@ from configparser import ConfigParser
 from selenium.webdriver.chrome.options import Options
 from argparse import ArgumentParser
 from func import *
+from webdriver_manager.chrome import ChromeDriverManager
 import warnings
 import sys
 import os
